@@ -1,0 +1,141 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 16px;
+  background-color: #f4f5f7;
+  font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+  color: #2c3e50;
+}
+
+.card {
+  width: 100%;
+  max-width: 1040px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0 0 24px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #eef0f4;
+  color: #555;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+#search {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 28px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+#search:focus {
+  border-color: #2f80ed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding: 12px 16px;
+  background-color: #f4f5f7;
+  color: #666;
+  font-size: 0.85rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.col-star {
+  width: 60px;
+  text-align: center;
+}
+
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background-color: #fafbfc;
+}
+
+.star {
+  text-align: center;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.star.filled {
+  color: #f1c40f;
+}
+
+.symbol {
+  font-weight: 600;
+}
+
+.up {
+  color: #eb4d55;
+  font-weight: 600;
+}
+
+.down {
+  color: #2f80ed;
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 32px 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .card {
+    padding: 24px 16px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 8px 8px;
+    font-size: 0.8rem;
+  }
+}
