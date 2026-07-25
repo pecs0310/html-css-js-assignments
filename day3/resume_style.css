@@ -1,0 +1,246 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background-color: #171717;
+  padding: 32px 24px;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar__nav a {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.sidebar__nav a:hover,
+.sidebar__nav a.active {
+  color: #4da3ff;
+  font-weight: bold;
+}
+
+/* ---------- Content / Card ---------- */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 840px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.resume-header h1 {
+  margin: 0 0 12px;
+  font-size: 2.2rem;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #222;
+  margin: 24px 0 40px;
+}
+
+/* ---------- Sections ---------- */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  border-left: 4px solid #222;
+  padding-left: 12px;
+  font-size: 1.4rem;
+  margin: 0 0 20px;
+}
+
+section#introduce p {
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ---------- Skills ---------- */
+.skill-group {
+  margin-bottom: 16px;
+}
+
+.skill-group h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin: 0 0 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  background-color: #eef0f4;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* ---------- Experience ---------- */
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.job {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.job:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.job h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.role {
+  color: #555;
+  margin: 4px 0 16px;
+}
+
+.badge {
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  margin-left: 6px;
+}
+
+.project {
+  margin-top: 16px;
+  padding-left: 16px;
+  border-left: 2px solid #eee;
+}
+
+.project h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.project ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.period {
+  color: #999;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* ---------- Education / Awards / Certifications ---------- */
+#education .row-between,
+#awards .row-between,
+#certifications .row-between {
+  padding: 6px 0;
+}
+
+.edu-name {
+  font-weight: bold;
+}
+
+/* ---------- Footer ---------- */
+.resume-footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 16px 24px;
+  }
+
+  .sidebar__nav {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .resume-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
